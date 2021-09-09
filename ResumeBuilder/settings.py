@@ -135,4 +135,4 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'global.karanchavan.test@gmail.com'
-EMAIL_HOST_PASSWORD = 'Cristiano@7test'
+EMAIL_HOST_PASSWORD = '***********'
