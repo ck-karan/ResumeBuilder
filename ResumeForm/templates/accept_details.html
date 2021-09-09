@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+  {% load static %}
+    <div class="container border border-dark mt-5 mb-5 w-50 p-3 rounded">
+      <h1>Resume Generator</h1>
+    <div class="container mb-4 mt-5">
+
+    <form action="" method="POST" >
+        {% csrf_token %}
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="fname" name="fname" class="form-control" />
+              <label class="form-label" for="form6Example1">First name</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="lname" name="lname" class="form-control" />
+              <label class="form-label" for="form6Example2">Last name</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="date" id="dob" name="dob" class="form-control" />
+              <label class="form-label" for="form6Example1">Date of Birth</label>
+            </div>
+          </div>
+        </div>
+            
+        <!-- Address -->
+        <div class="form-outline mb-4">
+          <input type="text" id="address" name="address" class="form-control" />
+          <label class="form-label" for="form6Example4">Address</label>
+        </div>
+      
+        <!-- Email -->
+        <div class="form-outline mb-4">
+          <input type="email" id="email" name="email" class="form-control" />
+          <label class="form-label" for="form6Example5">Email</label>
+          <small id="small" class="form-text text-muted"> You will get your resume on this Email ID </small>
+        </div>
+      
+        <!-- Phone -->
+        <div class="form-outline mb-4">
+          <input type="number" id="phone" name="phone" class="form-control" />
+          <label class="form-label" for="form6Example6">Phone</label>
+        </div>
+      
+        <!-- LinkedIn -->
+        <div class="form-outline mb-4">
+            <input type="text" id="linkedin" name="linkedin" class="form-control" />
+            <label class="form-label" for="form6Example4">Linked In</label>
+          </div>
+        
+        <!-- SSC -->
+        <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="ssc" name="ssc" class="form-control" />
+                <label class="form-label" for="form6Example1">SSC Peracentage</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="sscu" name="sscu" class="form-control" />
+                <label class="form-label" for="form6Example2">University</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- HSC -->
+        <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="hsc" name="hsc" class="form-control" />
+                <label class="form-label" for="form6Example1">HSC Peracentage</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="hscu" name="hscu" class="form-control" />
+                <label class="form-label" for="form6Example2">University</label>
+              </div>
+            </div>
+          </div>
+
+           <!-- Graduation -->
+        <div class="form-outline mb-4">
+            <input type="text" id="grad" name="grad" class="form-control" />
+            <label class="form-label" for="form6Example4">Graduation Field</label>
+          </div>
+
+            <!-- GRADUATION -->
+        <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="gradp" name="gradp" class="form-control" />
+                <label class="form-label" for="form6Example1">Graduation Peracentage</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="gradu" name="gradu" class="form-control" />
+                <label class="form-label" for="form6Example2">University</label>
+              </div>
+            </div>
+          </div>
+      
+            <!-- Skills -->
+        <div class="form-outline mb-4">
+            <textarea class="form-control" id="skills" name="skills" rows="4" placeholder="Enter each skill with Comma ',' separated"></textarea>
+            <label class="form-label" for="form6Example4">Skills</label>
+          </div>
+
+             <!-- Experience -->
+        <div class="form-outline mb-4">
+            <textarea class="form-control" id="expr" name="expr" rows="4" placeholder="Use '#' before the Title and '*' before it's description."></textarea>
+            <label class="form-label" for="form6Example4">Experience</label>
+          </div>
+
+          <!-- Projects -->
+        <div class="form-outline mb-4">
+            <textarea class="form-control" id="proj" name="proj" rows="4" placeholder="Before each project add '*' "></textarea>
+            <label class="form-label" for="form6Example4">Projects</label>
+          </div>
+
+           <!-- Objective -->
+        <div class="form-outline mb-4">
+            <textarea class="form-control" id="obj" name="objective" rows="4"></textarea>
+            <label class="form-label" for="form6Example4">Career Objective</label>
+          </div>
+
+                    <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Generate Resume</button>
+      </form>
+    </div>
+</div>
+</body>
+</html>
